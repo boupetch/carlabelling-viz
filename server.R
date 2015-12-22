@@ -1,24 +1,14 @@
 library(shiny)
+require(rCharts)
 
-data <- read.csv2("data.csv")
+vehicles <- read.csv2("data.csv",stringsAsFactors = TRUE)
 
-shinyServer(function(input, output) {
-  formulaString <- reactive({
-    paste("co2 ~ ", input$variable)
+shinyServer( function(input, output) {
+  
+  output$dataplot <- renderChart2({
+  p1 <- rPlot(x=input$variable1,y=input$variable2, data = vehicles, type = 'point', color = 'modele')
+  p1$set(legendPosition = "none")
+  return(p1)
   })
   
-  fit <- reactive({
-    lm(as.formula(formulaString()), data = mpgData)
-  })
-  
-  output$summaryFit <- renderPrint({
-    summary(fit())
-  })
-  
-  output$mpgPlot <- renderPlot({
-    with(mpgData, {
-      plot(as.formula(formulaString()), main = formulaString())
-      abline(fit(), col = 4)
-    })
-  })
 })
