@@ -1,12 +1,13 @@
 ### About the car labelling data
 
-Data displayed here comes from the 2015 [ADEME car labelling data](https://www.data.gouv.fr/fr/datasets/emissions-de-co2-et-de-polluants-des-vehicules-commercialises-en-france) published on [Data.gouv.fr](https://www.data.gouv.fr/fr/), the French open data portal. 
+Data displayed here comes from the 2015 [ADEME car labelling data](https://www.data.gouv.fr/fr/datasets/emissions-de-co2-et-de-polluants-des-vehicules-commercialises-en-france) published on [Data.gouv.fr](https://www.data.gouv.fr/fr/), the French open data portal. All vehicles sold in France must succeed various tests to be approved, including emissions tests. The French agency [ADEME](http://www.ademe.fr/) provide these tests results, along with others informations about the cars. The original dataset contains all engines variations for all cars models sold in France. For this visualization, only one version of each car model has been kept for simplicity purposes.
 
-__425__ models are available. This visualization displays __12__ variables for each one:
+__699__ models are showed here. This visualization displays __13__ variables for each one:
 
 * `brand`: The vehicle brand
 * `model`: Brand and model name
 * `hybrid`: Hybrid (Yes/No)
+* `energy` : The energy type
 * `tax_horsepower`: Vehicle [tax horsepower](https://en.wikipedia.org/wiki/Tax_horsepower)
 * `kwpower`: [Maximal power (kilowatts)](https://en.wikipedia.org/wiki/Engine_power)
 * `weight`: Empty weight (kg)
@@ -19,9 +20,12 @@ __425__ models are available. This visualization displays __12__ variables for e
 
 However, more variables are available in the original dataset. Additional data and documentation is also available on the [ADEME car labelling website](http://carlabelling.ademe.fr/). 
 
-### Emission data
+### Emission tests
 
 Emission data  values are results of [standardised European tests](http://www.dieselnet.com/standards/cycles/) conducted on each vehicle model, following [European emission standards] (https://en.wikipedia.org/wiki/European_emission_standards).
-### Code
 
-Code source for this visualization is available on [Github](https://github.com/boupetch/vehicles-emissions-product).
+### Code & links
+
+* Source code for this Shiny application is hosted on [Github](https://github.com/boupetch/vehicles-emissions-product).
+* Find my other works using open data on [Frenchkpi.com](http://www.frenchkpi.com)
+* And follow me on [Twitter](https://twitter.com/frenchkpi)! 

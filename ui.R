@@ -3,14 +3,15 @@ require(rCharts)
 
 shinyUI(
 pageWithSidebar(
-      headerPanel("Explore the ADEME car labelling data"),
-      sidebarPanel("Select 2 characteristics to display on the chart.",
+      headerPanel("Visualize the car models sold in France"),
+      sidebarPanel(includeMarkdown("documentation.md"),
                    fluidPage(
                      fluidRow(
                        h4("Y Axis"),
                        selectInput("variable1", "",
                            c("Tax horsepower" = "tax_horsepower",
                              "Consumption (l/100)" = "consumption",
+                             "Energy" = "energy",
                              "CO2 emission (g/km)" = "co2",
                              "Brand" = "brand",
                              "Hybrid" = "hybrid",
@@ -26,6 +27,7 @@ pageWithSidebar(
                        selectInput("variable2", "",
                            c("CO2 emission (g/km)" = "co2",
                              "Consumption (l/100)" = "consumption",
+                             "Energy" = "energy",
                              "Brand" = "brand",
                              "Hybrid" = "hybrid",
                              "Tax horsepower" = "tax_horsepower",
