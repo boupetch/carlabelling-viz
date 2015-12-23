@@ -3,8 +3,8 @@ require(rCharts)
 
 shinyUI(
 pageWithSidebar(
-      headerPanel("Explore vehicles data"),
-      sidebarPanel("Select the characteristics to visualize on the chart.",
+      headerPanel("Explore the ADEME car labelling data"),
+      sidebarPanel("Select 2 characteristics to display on the chart.",
                    fluidPage(
                      fluidRow(
                        h4("Y Axis"),

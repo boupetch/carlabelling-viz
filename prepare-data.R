@@ -19,6 +19,17 @@ vehicules$ptcl <- NULL
 vehicules$masse_ordma_max <- NULL
 
 names(vehicules)[names(vehicules)=="mrq_utac"] <- "brand"
+vehicules$brand <- as.character(vehicules$brand)
+simpleCap <- function(x) {
+  s <- tolower(x)
+  s <- strsplit(s, " ")[[1]]
+  return (paste(toupper(substring(s, 1,1)), substring(s, 2),
+                sep="", collapse=" "))
+}
+
+vehicules$brand <- sapply(vehicules$brand, simpleCap)
+vehicules$brand[vehicules$brand == "Bmw"] <- "BMW"
+
 names(vehicules)[names(vehicules)=="mod_utac"] <- "model"
 vehicules$model <- paste(vehicules$brand, vehicules$model)
 
@@ -26,7 +37,6 @@ names(vehicules)[names(vehicules)=="puiss_admin"] <- "tax_horsepower"
 names(vehicules)[names(vehicules)=="conso_mixte"] <- "consumption"
 
 names(vehicules)[names(vehicules)=="masse_ordma_min"] <- "weight"
-
 
 names(vehicules)[names(vehicules)=="co2_mixte"] <- "co2"
 vehicules$co2 <- as.numeric(vehicules$co2)
@@ -38,6 +48,7 @@ vehicules$hybrid[vehicules$hybrid == "non "] <- "No"
 
 names(vehicules)[names(vehicules)=="puiss_max"] <- "kwpower"
 vehicules$kwpower <- as.double(as.character(vehicules$kwpower))
+
 
 vehicules$co_typ_1 <- as.double(as.character(vehicules$co_typ_1))
 vehicules$hc <- as.double(as.character(vehicules$hc))
@@ -53,7 +64,7 @@ vehicules$co_typ_1[is.na(vehicules$co_typ_1)] <- 0
 vehicules$co2[is.na(vehicules$co2)] <- 0
 vehicules$kwpower[is.na(vehicules$kwpower)] <- 0
 
-
 vehicules <- vehicules[!duplicated(vehicules$model),]
+
 
 write.csv2(vehicules,"data.csv",row.names=FALSE)
