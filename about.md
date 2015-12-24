@@ -26,6 +26,7 @@ Emission data  values are results of [standardised European tests](http://www.di
 
 ### Code & links
 
-* Source code for this Shiny application is hosted on [Github](https://github.com/boupetch/vehicles-emissions-product).
+* Source code for this application is hosted on  [Github](https://github.com/boupetch/vehicles-emissions-product).
+* Nice slides also on [Github](http://boupetch.github.io/carlabelling-slides).
 * Find my other works using open data on [Frenchkpi.com](http://www.frenchkpi.com)
 * And follow me on [Twitter](https://twitter.com/frenchkpi)! 

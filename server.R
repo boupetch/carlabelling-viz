@@ -1,5 +1,5 @@
 library(shiny)
-require(rCharts)
+library(rCharts)
 
 vehicles <- read.csv2("data.csv")
 vehicles$consumption <- as.double(as.character(vehicles$consumption))
