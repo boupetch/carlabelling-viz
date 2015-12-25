@@ -5,10 +5,14 @@ The ADEME car labelling data visualization is a simple app is built with [Shiny]
 
 ### Run the application
 
-To run the application in R, execute the following commands:
+Execute the following commands in R to install required librairies and run the app:
 
 ```
+install.packages("shiny")
+install.packages("devtools")
 library(shiny)
+library(devtools)
+install_github('rCharts', 'ramnathv')
 runGitHub("carlabelling-viz", "boupetch") 
 ```
 
