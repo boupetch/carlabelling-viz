@@ -3,7 +3,7 @@ library(rCharts)
 
 shinyUI(
 pageWithSidebar(
-      headerPanel("Visualize the car models sold in France"),
+      headerPanel("Visualize car models sold in France"),
       sidebarPanel(includeMarkdown("documentation.md"),
                    fluidPage(
                      fluidRow(
@@ -28,7 +28,6 @@ pageWithSidebar(
                            c("CO2 emission (g/km)" = "co2",
                              "Consumption (l/100)" = "consumption",
                              "Energy" = "energy",
-                             "Brand" = "brand",
                              "Hybrid" = "hybrid",
                              "Tax horsepower" = "tax_horsepower",
                              "Max Power (kW)" = "kwpower",

@@ -12,7 +12,7 @@ __699__ models are showed here. This visualization displays __13__ variables for
 * `kwpower`: [Maximal power (kilowatts)](https://en.wikipedia.org/wiki/Engine_power)
 * `weight`: Empty weight (kg)
 * `consumption`: Gas consumption (liters/100km)
-* `co2`: [CO2](https://en.wikipedia.org/wiki/Carbon_dioxide)
+* `co2`: [CO2](https://en.wikipedia.org/wiki/Carbon_dioxide) Emissions (kg)
 * `co_typ_1`: [Type 1 CO](https://en.wikipedia.org/wiki/Carbon_monoxide) test result (Carbon monoxide)
 * `hc`: [HC](https://en.wikipedia.org/wiki/Hydrocarbon) test result (Hydrocarbon)
 * `nox`: [NOx](https://en.wikipedia.org/wiki/Nitrogen_oxide) test result (Nitrogen oxides)

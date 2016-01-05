@@ -66,8 +66,8 @@ shinyServer( function(input, output) {
     else{
       p1$guides(
         x = list(
-          numticks = length( levels( as.factor(vehicles[c(input$variable2)]) ) ),
-          labels =as.factor(vehicles[c(input$variable2)][[1]])
+          #numticks = length( levels( as.factor(vehicles[c(input$variable2)]) ) ),
+          #labels =as.factor(vehicles[c(input$variable2)][[1]])
         )
       )
     }
@@ -93,9 +93,7 @@ shinyServer( function(input, output) {
         numticks = length( levels( as.factor(vehicles$brand) ) )
       )
     )
-    #p1$params$width <- 1100
     p1$params$height <- 600
-    #p1$set(legendPosition = "none")
     
     return(p1)
     
