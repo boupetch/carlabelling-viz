@@ -3,7 +3,7 @@ library(rCharts)
 
 shinyUI(
 pageWithSidebar(
-      headerPanel("Visualize car models sold in France"),
+      headerPanel("Visualize characteristics of car models sold in France"),
       sidebarPanel(includeMarkdown("documentation.md"),
                    fluidPage(
                      fluidRow(
